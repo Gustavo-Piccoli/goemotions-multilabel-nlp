@@ -1,6 +1,6 @@
 # Classificação Multirrótulo de Emoções de Granularidade Fina com Transformers (BERT vs. RoBERTa no GoEmotions)
 
-[![CI](https://img.shields.io/badge/CI-Ruff_%2B_Pytest-22c55e?logo=githubactions&logoColor=white)](.github/workflows/ci.yml)
+[![CI](https://github.com/Gustavo-Piccoli/goemotions-multilabel-nlp/actions/workflows/ci.yml/badge.svg)](https://github.com/Gustavo-Piccoli/goemotions-multilabel-nlp/actions/workflows/ci.yml)
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.2%2B-EE4C2C?logo=pytorch&logoColor=white)](https://pytorch.org/)
 [![Hugging Face Transformers](https://img.shields.io/badge/%F0%9F%A4%97%20Transformers-4.46-F59E0B)](https://huggingface.co/docs/transformers)
