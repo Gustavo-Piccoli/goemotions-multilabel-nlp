@@ -1,0 +1,57 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "goemotions-multilabel-nlp"
+version = "1.0.0"
+description = "Fine-grained multi-label emotion classification on the GoEmotions corpus (28 classes) comparing BERT and RoBERTa."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+    { name = "Gustavo Auad Piccoli", email = "gapiccoli@inf.ufrgs.br" }
+]
+keywords = ["nlp", "transformers", "bert", "roberta", "goemotions", "multi-label-classification", "emotion-recognition", "pytorch"]
+dependencies = [
+    "torch>=2.2.0",
+    "transformers>=4.40.0",
+    "datasets>=2.19.0",
+    "accelerate>=0.30.0",
+    "scikit-learn>=1.4.0",
+    "pandas>=2.1.0",
+    "numpy>=1.26.0",
+    "matplotlib>=3.8.0",
+    "seaborn>=0.13.0",
+    "PyYAML>=6.0.0",
+    "tqdm>=4.66.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "ruff>=0.4.0",
+    "ipykernel>=6.29.0",
+]
+
+[project.scripts]
+goemotions-train = "src.train:main"
+goemotions-evaluate = "src.evaluate:main"
+goemotions-predict = "src.predict:main"
+goemotions-compare = "src.compare:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "-v"
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W"]

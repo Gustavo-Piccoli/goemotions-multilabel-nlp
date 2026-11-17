@@ -1,0 +1,35 @@
+# Python byte-compiled / cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Pytest & Ruff
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Dataset cache & intermediate model checkpoints
+data/
+results/*/best_model/
+results/*/checkpoint-*/
+*.safetensors
+*.bin
+*.pt
+*.pth
+results.zip
+
+# IDE & OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
